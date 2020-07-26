@@ -1,7 +1,42 @@
-.nav-bar {
-
+:root{
+    --slurm-green: #CDDB49;
+    --slurm-blue: #0152A1;
+    --slurm-light-blue: #33B4E9;
+    --slurm-pink: #E90189;
+    --slurm-light-pink: #E28CC6;
+    --orange-title: #CA592D;
 }
 
-.nav-link {
-    
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--slurm-blue);
+}
+
+#header-img {
+    height: 50px;
+    width: 50px;
+}
+
+header .header-title {
+    margin-left: 10px;
+    color: var(--slurm-green);
+    font-family: 'Corben', sans-serif;
+}
+
+header .nav-bar {
+    margin-left: auto;
+}
+
+header .nav-link {
+    margin: 0 15px 0 auto;
+    color: white;
+}
+
+main {
+    margin-top: 100px;
 }
