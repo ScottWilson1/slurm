@@ -7,6 +7,25 @@
     --orange-title: #CA592D;
 }
 
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face {
+    font-family:"Alienese";
+    src:url('fonts/fr-fal1.woff') format('woff'),url('fonts/fr-fal1.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"Futurama";
+    src:url('fonts/fr-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Futurama;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -20,6 +39,7 @@ header {
 #header-img {
     height: 50px;
     width: 50px;
+    margin-left: 10px;
 }
 
 header .header-title {
@@ -39,4 +59,43 @@ header .nav-link {
 
 main {
     margin-top: 100px;
+}
+
+#email-section {
+    text-align: center;
+}
+
+.win-trip-title {
+ font-family: Francois One, sans-serif;
+ font-size: 85px;
+ color: #ea6734;
+ padding-top: 60px;
+ margin-bottom: 0px;
+ letter-spacing: .06em;
+}
+
+.email-description {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Futurama;
+    font-size: 30px;
+    color: #309fa1;
+}
+
+.disclaimer-text {
+    margin-right: 30%;
+    margin-left: 30%;
+    font-size: 9px;
+    color: #757575;
+    text-align: justify;
+}
+
+.section-heading {
+    font-size: 30px;
+    font-family: Corben;
+    color: var(--slurm-pink);
+}
+
+.brand-section {
+    display: flex;
 }
