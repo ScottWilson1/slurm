@@ -4,7 +4,7 @@
     --slurm-light-blue: #33B4E9;
     --slurm-pink: #E90189;
     --slurm-light-pink: #E28CC6;
-    --orange-title: #CA592D;
+    --orange-title: #ea6734;
 }
 
 /* @font-face kit by Fonts2u (https://fonts2u.com) */
@@ -68,7 +68,7 @@ main {
 .win-trip-title {
  font-family: Francois One, sans-serif;
  font-size: 85px;
- color: #ea6734;
+ color: var(--orange-title);
  padding-top: 60px;
  margin-bottom: 0px;
  letter-spacing: .06em;
@@ -94,6 +94,7 @@ main {
     font-size: 30px;
     font-family: Corben;
     color: var(--slurm-pink);
+    padding-bottom: 25px;
 }
 
 .brand-container {
@@ -103,6 +104,7 @@ main {
 .brand-container div {
     width: 28%;
     margin-left: 4%;
+    padding-bottom: 35px;
 }
 
 .brand-container img {
@@ -113,7 +115,8 @@ main {
 .brand-container p {
     font-family: Francois One;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     text-align: center;
-    padding-top: -5px;
+    margin-top: 5px;
+    color: #595959;
 }
