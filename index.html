@@ -22,7 +22,7 @@
 
         <main>
             <div id="email-section">
-                <h2 class="win-trip-title">WIN<br>A TRIP!</h2>
+                <h2 class="win-trip-heading">WIN<br>A TRIP!</h2>
                 <p class="email-description">Enter for a chance to win a tour of the Slurm bottling plant on planet Wormulon and party with Slurms MacKenzie</p>
                 <form action="blank">
                     <input type="email" placeholder="Enter your email">
@@ -48,7 +48,6 @@
                     </div>
                 </div>
 
-
             </div>
 
             <div id="video-section" class="video-section">
@@ -63,7 +62,15 @@
                 <a href="#brands-section" class="nav-link">Brands</a>
                 <a href="#video-section" class="nav-link">Learn More</a>
             </nav>
-            <img id="footer-img" src="images/party-worm.png" alt="slurms-mackenzie">
+            <script>
+                function play() {
+                    var audio = document.getElementById("audio");
+                    audio.play();
+                }
+            </script>
+
+            <img id="footer-img" src="images/party-worm.png" alt="slurms-mackenzie" onclick="play()">
+            <audio id="audio" src="audio/wimmy-wam-wam-wozzle.mp3" type="audio/mp3">Your browser does not support this audio element.</audio>
         </footer>
 
     </body>

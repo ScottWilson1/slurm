@@ -1,11 +1,11 @@
 :root{
     --slurm-green: #CDDB49;
     --slurm-blue: #0152A1;
-    --slurm-light-blue: #33B4E9;
+    --slurm-light-blue: #7ed4f7;
     --slurm-pink: #E90189;
     --slurm-light-pink: #ECB6DA;
     --orange-title: #ea6734;
-    --footer-height: 60px;
+    --footer-height: 56px;
 }
 
 /* @font-face kit by Fonts2u (https://fonts2u.com) */
@@ -19,7 +19,6 @@
 a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
     font-weight: bold;
 }
 
@@ -59,6 +58,7 @@ header .nav-bar {
 
 header .nav-link {
     margin: 0 30px 0 auto;
+    font-size: 20px;
 }
 
 main {
@@ -69,7 +69,7 @@ main {
     text-align: center;
 }
 
-.win-trip-title {
+.win-trip-heading {
  font-family: Francois One, sans-serif;
  font-size: 85px;
  color: var(--orange-title);
@@ -99,6 +99,8 @@ main {
     font-family: Corben;
     color: var(--slurm-pink);
     margin-bottom: 40px;
+    width: fit-content;
+    border-bottom: 6px solid var(--slurm-light-blue);
 }
 
 .brand-container {
@@ -113,7 +115,7 @@ main {
 
 .brand-container img {
     max-width: 100%;
-    border-radius: 30px;
+    border-radius: 9%;
     box-shadow: 0 6px 8px #bdbdbd;
 }
 
@@ -147,6 +149,7 @@ footer .nav-bar {
 
 footer .nav-link {
     margin: 0 auto 0 30px;
+    font-size: 16px;
 }
 
 footer img {
@@ -154,4 +157,5 @@ footer img {
     margin-right: 20px;
     height: 120px;
     align-self: flex-end;
+    cursor: default;
 }
