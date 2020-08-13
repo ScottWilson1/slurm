@@ -3,8 +3,9 @@
     --slurm-blue: #0152A1;
     --slurm-light-blue: #33B4E9;
     --slurm-pink: #E90189;
-    --slurm-light-pink: #E28CC6;
+    --slurm-light-pink: #ECB6DA;
     --orange-title: #ea6734;
+    --footer-height: 60px;
 }
 
 /* @font-face kit by Fonts2u (https://fonts2u.com) */
@@ -15,8 +16,19 @@
     font-style:normal;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--slurm-light-pink);
+}
+
 body {
-    font-family: Nobile;
+    font-family: Nobile, sans-serif;
 }
 
 header {
@@ -29,7 +41,7 @@ header {
     background-color: var(--slurm-blue);
 }
 
-#header-img {
+header img {
     height: 60px;
     width: 60px;
     margin-left: 15px;
@@ -47,7 +59,6 @@ header .nav-bar {
 
 header .nav-link {
     margin: 0 30px 0 auto;
-    color: white;
 }
 
 main {
@@ -103,6 +114,7 @@ main {
 .brand-container img {
     max-width: 100%;
     border-radius: 30px;
+    box-shadow: 0 6px 8px #bdbdbd;
 }
 
 .brand-container p {
@@ -114,6 +126,10 @@ main {
     color: #595959;
 }
 
+.video-section {
+    margin-bottom: calc(var(--footer-height) + 40px);
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -121,6 +137,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: var(--footer-height);
     background-color: var(--slurm-blue);
 }
 
@@ -130,5 +147,11 @@ footer .nav-bar {
 
 footer .nav-link {
     margin: 0 auto 0 30px;
-    color: white;
+}
+
+footer img {
+    margin-left: auto;
+    margin-right: 20px;
+    height: 120px;
+    align-self: flex-end;
 }
