@@ -15,13 +15,6 @@
     font-style:normal;
 }
 
-@font-face {
-    font-family:"Futurama";
-    src:url('fonts/fr-bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
     font-family: Nobile;
 }
@@ -37,13 +30,13 @@ header {
 }
 
 #header-img {
-    height: 50px;
-    width: 50px;
-    margin-left: 10px;
+    height: 60px;
+    width: 60px;
+    margin-left: 15px;
 }
 
 header .header-title {
-    margin-left: 10px;
+    margin-left: 15px;
     color: var(--slurm-green);
     font-family: 'Corben', sans-serif;
 }
@@ -53,7 +46,7 @@ header .nav-bar {
 }
 
 header .nav-link {
-    margin: 0 15px 0 auto;
+    margin: 0 30px 0 auto;
     color: white;
 }
 
@@ -71,7 +64,7 @@ main {
  color: var(--orange-title);
  padding-top: 60px;
  margin-bottom: 0px;
- letter-spacing: .06em;
+ letter-spacing: .05em;
 }
 
 .email-description {
@@ -79,7 +72,7 @@ main {
     margin-right: 10%;
     font-size: 34px;
     font-family: Francois One;
-    color: #309fa1;
+    color: #209b9d;
 }
 
 .disclaimer-text {
@@ -94,7 +87,7 @@ main {
     font-size: 30px;
     font-family: Corben;
     color: var(--slurm-pink);
-    padding-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 .brand-container {
@@ -119,4 +112,23 @@ main {
     text-align: center;
     margin-top: 5px;
     color: #595959;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--slurm-blue);
+}
+
+footer .nav-bar {
+    margin-right: auto;
+}
+
+footer .nav-link {
+    margin: 0 auto 0 30px;
+    color: white;
 }
