@@ -1,10 +1,12 @@
 :root{
     --slurm-green: #CDDB49;
     --slurm-blue: #0152A1;
-    --slurm-light-blue: #33B4E9;
     --slurm-pink: #E90189;
-    --slurm-light-pink: #E28CC6;
-    --orange-title: #CA592D;
+    --slurm-light-pink: #ECB6DA;
+    --orange-title: #ea6734;
+    --dark-gray: #545454;
+    --header-height: 100px;
+    --footer-height: 56px;
 }
 
 /* @font-face kit by Fonts2u (https://fonts2u.com) */
@@ -15,15 +17,29 @@
     font-style:normal;
 }
 
-@font-face {
-    font-family:"Futurama";
-    src:url('fonts/fr-bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+html {
+    background-color: var(--slurm-blue);
 }
 
 body {
-    font-family: Futurama;
+    font-family: Nobile, sans-serif;
+    font-size: 20px;
+    color: var(--dark-gray);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--slurm-light-pink);
 }
 
 header {
@@ -33,17 +49,18 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: var(--header-height);
     background-color: var(--slurm-blue);
 }
 
-#header-img {
-    height: 50px;
-    width: 50px;
-    margin-left: 10px;
+header img {
+    height: 60px;
+    width: 60px;
+    margin-left: 15px;
 }
 
 header .header-title {
-    margin-left: 10px;
+    margin-left: 15px;
     color: var(--slurm-green);
     font-family: 'Corben', sans-serif;
 }
@@ -53,49 +70,143 @@ header .nav-bar {
 }
 
 header .nav-link {
-    margin: 0 15px 0 auto;
-    color: white;
+    margin: 0 30px 0 auto;
+    font-size: 20px;
+    top: -100px;
 }
 
 main {
-    margin-top: 100px;
+    margin: 0 4%;
+}
+
+h2 {
+    font-size: 34px;
+    font-family: Corben;
+    color: var(--slurm-pink);
+    margin-bottom: 20px;
+}
+
+/* This accounts for the height of the header so the internal page links work correclty */
+h2::before {
+    display: block;
+    content: "";
+    margin-top: calc(var(--header-height) * -1);
+    height: var(--header-height);
+    visibility: hidden;
+    pointer-events: none;
 }
 
 #email-section {
     text-align: center;
 }
 
-.win-trip-title {
+.win-trip-heading {
  font-family: Francois One, sans-serif;
  font-size: 85px;
- color: #ea6734;
- padding-top: 60px;
+ color: var(--orange-title);
+ margin-top: calc(var(--header-height) + 50px);
  margin-bottom: 0px;
- letter-spacing: .06em;
+ letter-spacing: .05em;
 }
 
 .email-description {
     margin-left: 10%;
     margin-right: 10%;
-    font-family: Futurama;
-    font-size: 30px;
-    color: #309fa1;
+    font-size: 34px;
+    font-family: Francois One;
+    color: #209b9d;
+}
+
+input[type=email] {
+    width: 20%;
+    padding: 10px 18px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 2px solid var(--dark-gray);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.submit-button {
+    background-color: var(--slurm-pink);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 18px;
+    margin-left: -6px;
+    margin-bottom: 15px;
+    border: 2px solid var(--dark-gray);
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
 }
 
 .disclaimer-text {
     margin-right: 30%;
     margin-left: 30%;
+    margin-bottom: 50px;
     font-size: 9px;
     color: #757575;
     text-align: justify;
 }
 
-.section-heading {
-    font-size: 30px;
-    font-family: Corben;
-    color: var(--slurm-pink);
+.short-description {
+    margin-bottom: 30px;
 }
 
-.brand-section {
+.brand-container {
     display: flex;
+}
+
+.brand-container div {
+    width: 28vw;
+}
+
+.brand-container img {
+    max-width: 100%;
+    border-radius: 9%;
+    box-shadow: 0 6px 8px #bdbdbd;
+}
+
+.brand-container p {
+    font-family: Francois One;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.video-section {
+    margin-bottom: 50px;
+}
+
+.video {
+    width: 560px;
+    margin: auto;
+    display: block;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--footer-height);
+    background-color: var(--dark-gray);
+}
+
+footer .nav-bar {
+    margin-right: auto;
+}
+
+footer .nav-link {
+    margin: 0 auto 0 30px;
+    font-size: 16px;
+}
+
+footer img {
+    margin-left: auto;
+    margin-right: 20px;
+    height: 150px;
+    align-self: flex-end;
+    cursor: default;
 }
