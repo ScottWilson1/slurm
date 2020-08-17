@@ -1,7 +1,6 @@
 :root{
     --slurm-green: #CDDB49;
     --slurm-blue: #0152A1;
-    --slurm-light-blue: #7ed4f7;
     --slurm-pink: #E90189;
     --slurm-light-pink: #ECB6DA;
     --orange-title: #ea6734;
@@ -87,7 +86,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* This makes the internal page links work correclty */
+/* This accounts for the height of the header so the internal page links work correclty */
 h2::before {
     display: block;
     content: "";

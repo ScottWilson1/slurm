@@ -13,22 +13,24 @@
         <header id="header">
             <img id="header-img" src="images/slurm-logo.png" alt="">
             <h1 class="header-title">Enjoy Slurm</h1>
-            <nav id="nav-bar-header" class="nav-bar">
+            <nav id="nav-bar" class="nav-bar">
                 <a href="#email-section" class="nav-link">Enter to Win</a>
                 <a href="#brands-section" class="nav-link">Brands</a>
                 <a href="#video-section" class="nav-link">Learn More</a>
             </nav>
         </header>
+
         <main>
             <div id="email-section">
                 <h2 class="win-trip-heading">WIN<br>A TRIP!</h2>
                 <p class="email-description">Enter for a chance to win a tour of the Slurm bottling plant on planet Wormulon and party with Slurms McKenzie</p>
-                <form action="blank">
-                    <input type="email" placeholder="Enter your email" class="email-input">
-                    <button type="submit" class="submit-button">Submit</button>
+                <form id="form" action="blank">
+                    <input type="email" placeholder="Enter your email" id="email" class="email-input">
+                    <button type="submit" id="submit" class="submit-button">Submit</button>
                 </form>
                 <p class="disclaimer-text">No purchase necessary unless you wish to enter the contest. Odds of winning mathmatically insignificant. Slurm has been found to cause cancer in laboratory humans. Employees of Slurm Corp. and their families are eligible to enter and will probably win.<br><span style="font-family: Alienese;">The following species are ineligible: space wasps, space beavers, any other animal with the word 'space' in front of it, space chickens, and the elusive yak-face.</span></p>
             </div>
+
             <div id="brands-section">
                 <h2 class="section-heading">Brands</h2>
                 <p class="short-description">Look for the golden bottle cap in any of these cans of Slurm for your chance to party down with the Original Party Worm&reg;, Slurms McKenzie!</p>
@@ -47,28 +49,34 @@
                     </div>
                 </div>
             </div>
+
             <div id="video-section" class="video-section">
                 <h2 class="section-heading">Learn More</h2>
                 <p class="short-description">For more information about the contest rules and grand prize checkout out our Slurm-tacular commercial.</p>
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7ChmYX0mZf0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/7ChmYX0mZf0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </main>
+
         <footer id="footer">
             <nav id="nav-bar-footer" class="navbar">
                 <a href="#email-section" class="nav-link">Enter to Win</a>
                 <a href="#brands-section" class="nav-link">Brands</a>
                 <a href="#video-section" class="nav-link">Learn More</a>
             </nav>
+
             <script>
                 function play() {
                     var audio = document.getElementById("audio");
                     audio.play();
                 }
             </script>
+
             <img id="footer-img" src="images/party-worm.png" alt="slurms-mackenzie" onclick="play()">
-            <audio id="audio" src="audio/wimmy-wam-wam-wozzle.mp3" type="audio/mp3">Your browser does not support this audio element.</audio>
+
+            <audio id="audio" src="audio/wimmy-wam-wam-wozzle.mp3" type="audio/mp3">Your browser does not support this audio element.
+            </audio>
         </footer>
     </body>
 </html>
