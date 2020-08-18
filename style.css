@@ -11,10 +11,10 @@
 
 /* @font-face kit by Fonts2u (https://fonts2u.com) */
 @font-face {
-    font-family:"Alienese";
-    src:url('fonts/fr-fal1.woff') format('woff'),url('fonts/fr-fal1.ttf') format('truetype');
-    font-weight:normal;
-    font-style:normal;
+    font-family: "Alienese";
+    src: url('fonts/fr-fal1.woff') format('woff'),url('fonts/fr-fal1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
@@ -133,8 +133,7 @@ input[type=email] {
     font-weight: bold;
     border: none;
     padding: 10px 18px;
-    margin-left: -6px;
-    margin-bottom: 15px;
+    margin: 0 0 15px -6px;
     border: 2px solid var(--dark-gray);
     border-left: none;
     border-radius: 0 4px 4px 0;
@@ -146,9 +145,7 @@ input[type=email] {
 }
 
 .disclaimer-text {
-    margin-right: 29%;
-    margin-left: 29%;
-    margin-bottom: 50px;
+    margin: 0 29% 50px;
     font-size: 9px;
     color: #757575;
     text-align: justify;
@@ -208,8 +205,7 @@ footer .nav-link {
 }
 
 footer img {
-    margin-left: auto;
-    margin-right: 20px;
+    margin: 0 20px 0 auto;
     height: 150px;
     align-self: flex-end;
     cursor: default;
