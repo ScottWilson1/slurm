@@ -141,6 +141,10 @@ input[type=email] {
     font-size: 16px;
 }
 
+.submit-button:hover {
+    background-color: #b7016b;
+}
+
 .disclaimer-text {
     margin-right: 30%;
     margin-left: 30%;
