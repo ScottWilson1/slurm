@@ -101,12 +101,12 @@ h2::before {
 }
 
 .win-trip-heading {
- font-family: Francois One, sans-serif;
- font-size: 85px;
- color: var(--orange-title);
- margin-top: calc(var(--header-height) + 50px);
- margin-bottom: 0px;
- letter-spacing: .05em;
+    font-family: Francois One, sans-serif;
+    font-size: 85px;
+    color: var(--orange-title);
+    margin-top: calc(var(--header-height) + 50px);
+    margin-bottom: 0px;
+    letter-spacing: .05em;
 }
 
 .email-description {
@@ -120,7 +120,7 @@ h2::before {
 input[type=email] {
     width: 20%;
     padding: 10px 18px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     font-size: 16px;
     border: 2px solid var(--dark-gray);
     border-right: none;
@@ -129,15 +129,14 @@ input[type=email] {
 
 .submit-button {
     background-color: var(--slurm-pink);
+    font-size: 16px;
     color: white;
     font-weight: bold;
-    border: none;
     padding: 10px 18px;
-    margin: 0 0 15px -6px;
+    margin: 0 0 18px -6px;
     border: 2px solid var(--dark-gray);
     border-left: none;
     border-radius: 0 4px 4px 0;
-    font-size: 16px;
 }
 
 .submit-button:hover {
@@ -164,6 +163,10 @@ input[type=email] {
     width: 28vw;
 }
 
+.add-left-margin {
+    margin-left: 4vw;
+}
+
 .brand-container img {
     max-width: 100%;
     border-radius: 9%;
@@ -173,7 +176,7 @@ input[type=email] {
 .brand-container p {
     font-family: Francois One;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     margin-top: 5px;
 }
@@ -210,4 +213,205 @@ footer img {
     height: 150px;
     align-self: flex-end;
     cursor: default;
+}
+
+@media screen and (max-width: 880px) {
+    header img {
+        height: 50px;
+        width: 50px;
+    }
+    
+    header .header-title {
+        font-size: 26px;
+    }
+    
+    header .nav-link {
+        margin: 0 18px 0 auto;
+        font-size: 16px;
+    }
+
+    input[type=email] {
+        width: 36%;
+    }
+
+    .disclaimer-text {
+        margin: 0 8%;
+    }
+
+    .brand-container p {
+        font-size: 2.9vw;
+    }
+
+    .video-section {
+        margin-bottom: 70px;
+    }
+
+    footer .nav-link {
+        margin: 0 auto 0 18px;
+        font-size: 14px;
+    }
+
+    footer img {
+        height: 110px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    header img {
+        height: 42px;
+        width: 42px;
+    }
+    
+    header .header-title {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    
+    header .nav-link {
+        font-size: 14px;
+        margin: 0 10px 0 auto;
+    }
+
+    .win-trip-heading {
+        font-size: 12vw;
+    }
+
+    .email-description {
+        font-size: 5vw;
+    }
+
+    input[type=email] {
+        width: 40%;
+        padding: 8px 14px;
+        font-size: 2.6vw;
+    }
+    
+    .submit-button {
+        font-size: 2.6vw;
+        padding: 8px 14px;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    .short-description {
+        font-size: 3vw;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    footer .nav-link {
+        font-size: 14px;
+        margin: 0 auto 0 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    header img {
+        display: none;
+    }
+    
+    header .header-title {
+        font-size: 20px;
+        margin-left: 12px;
+    }
+    
+    header .nav-link {
+        font-size: 12px;
+        margin: 0 6px 0 auto;
+    }
+
+    input[type=email] {
+        margin-bottom: 15px;
+        font-size: 2.8vw;
+
+    }
+    
+    .submit-button {
+        margin-bottom: 15px;
+        font-size: 2.8vw;
+    }
+
+    .brand-container {
+        flex-direction: column;
+    }
+
+    .brand-container div {
+        width: 100%;
+    }
+
+    .add-left-margin {
+        margin-left: 0;
+    }
+
+    .brand-container p {
+        font-size: 4.5vw;
+        margin-bottom: 20px;
+    }
+
+    footer .nav-link {
+        font-size: 12px;
+        margin: 0 auto 0 8px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    header {
+        display: block;
+    }
+    
+    header .header-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-left: 23px;
+    }
+
+    header .nav-bar {
+        margin-left: 15px;
+    }
+    
+    header .nav-link {
+        font-size: 12px;
+        margin: 0 8px;
+    }
+
+    input[type=email] {
+        margin-bottom: 15px;
+        font-size: 3.2vw;
+    }
+    
+    .submit-button {
+        margin-bottom: 15px;
+        font-size: 3.2vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    .short-description {
+        font-size: 4vw;
+    }
+
+    .video-section {
+        margin-bottom: 50px;
+    }
+
+    footer img {
+        height: 90px;
+        margin-right: 6px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .video-section {
+        margin-bottom: 40px;
+    }
+    
+    footer img {
+        display: none;
+    }
 }
