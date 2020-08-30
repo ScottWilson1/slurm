@@ -42,7 +42,7 @@ a:hover {
     color: var(--slurm-light-pink);
 }
 
-header {
+.header-row {
     display: flex;
     align-items: center;
     position: fixed;
@@ -53,23 +53,23 @@ header {
     background-color: var(--slurm-blue);
 }
 
-header img {
+.header-row img {
     height: 70px;
     width: 70px;
     margin-left: 15px;
 }
 
-header .header-title {
+.header-row .header-title {
     margin-left: 15px;
     color: var(--slurm-green);
     font-family: 'Corben', sans-serif;
 }
 
-header .nav-bar {
+.header-row .nav-bar {
     margin-left: auto;
 }
 
-header .nav-link {
+.header-row .nav-link {
     margin: 0 30px 0 auto;
     font-size: 20px;
     top: -100px;
@@ -106,7 +106,7 @@ h2::before {
     color: var(--orange-title);
     margin-top: calc(var(--header-height) + 50px);
     margin-bottom: 0px;
-    letter-spacing: .05em;
+    letter-spacing: .04em;
 }
 
 .email-description {
@@ -117,11 +117,14 @@ h2::before {
     color: #209b9d;
 }
 
+.email-submit {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
 input[type=email] {
     width: 20%;
     padding: 10px 18px;
-    margin-bottom: 18px;
-    font-size: 16px;
     border: 2px solid var(--dark-gray);
     border-right: none;
     border-radius: 4px 0 0 4px;
@@ -129,11 +132,10 @@ input[type=email] {
 
 .submit-button {
     background-color: var(--slurm-pink);
-    font-size: 16px;
     color: white;
     font-weight: bold;
     padding: 10px 18px;
-    margin: 0 0 18px -6px;
+    margin-left: -6px;
     border: 2px solid var(--dark-gray);
     border-left: none;
     border-radius: 0 4px 4px 0;
@@ -215,19 +217,80 @@ footer img {
     cursor: default;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 940px) {
+    :root {
+        --header-height: 55px;
+        --footer-height: 40px;
+    }
+
+    header .nav-bar {
+        display:none;
+    }
+
     header img {
-        height: 50px;
-        width: 50px;
+        display: none;
     }
-    
-    header .header-title {
-        font-size: 26px;
+
+    .header-row .header-title {
+        font-size: 27px;
     }
-    
-    header .nav-link {
-        margin: 0 18px 0 auto;
-        font-size: 16px;
+
+    .hamburger-button-container {
+        background-color: var(--slurm-blue);
+        display: inline-block;
+        position: absolute;
+        right: 2%;
+        top: 5%;
+        cursor: pointer;
+    }
+
+    .menubar1, .menubar2, .menubar3 {
+        width: 40px;
+        height: 6px;
+        background-color: var(--slurm-green);
+        margin: 7px 0;
+        transition: 0.4s;
+    }
+
+    .change .menubar1 {
+        -webkit-transform: rotate(-45deg) translate(-10px, 9px);
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    .change .menubar2 {
+        opacity:0;
+    }
+
+    .change .menubar3 {
+        -webkit-transform: rotate(45deg) translate(-9px, -9px);
+        transform: rotate(45deg) translate(-9px, -9px);
+    }
+
+    header #side-nav {
+        height: 100%;
+        width: 0px;
+        z-index: 1;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        background-color: var(--dark-gray);
+        overflow-x: hidden;
+        white-space: nowrap;
+        transition: 0.4s;
+        padding-top: 30px;
+    }
+
+    header #side-nav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 17px;
+        color: white;
+        display: block;
+    }
+
+    header #side-nav a:hover {
+        background-color: var(--slurm-light-blue);
+        color: var(--slurm-pink);
     }
 
     input[type=email] {
@@ -243,35 +306,20 @@ footer img {
     }
 
     .video-section {
-        margin-bottom: 70px;
+        margin-bottom: 50px;
     }
 
     footer .nav-link {
-        margin: 0 auto 0 18px;
+        margin: 0 auto 0 12px;
         font-size: 14px;
     }
 
     footer img {
-        height: 110px;
+        height: 85px;
     }
 }
 
 @media screen and (max-width: 680px) {
-    header img {
-        height: 42px;
-        width: 42px;
-    }
-    
-    header .header-title {
-        font-size: 20px;
-        margin-left: 10px;
-    }
-    
-    header .nav-link {
-        font-size: 14px;
-        margin: 0 10px 0 auto;
-    }
-
     .win-trip-heading {
         font-size: 12vw;
     }
@@ -280,14 +328,16 @@ footer img {
         font-size: 5vw;
     }
 
+    .email-submit {
+        font-size: 2.6vw;
+    }
+
     input[type=email] {
         width: 40%;
         padding: 8px 14px;
-        font-size: 2.6vw;
     }
     
     .submit-button {
-        font-size: 2.6vw;
         padding: 8px 14px;
     }
 
@@ -302,35 +352,10 @@ footer img {
     .video {
         width: 100%;
     }
-
-    footer .nav-link {
-        font-size: 14px;
-        margin: 0 auto 0 10px;
-    }
 }
 
 @media screen and (max-width: 520px) {
-    header img {
-        display: none;
-    }
-    
-    header .header-title {
-        font-size: 20px;
-        margin-left: 12px;
-    }
-    
-    header .nav-link {
-        font-size: 12px;
-        margin: 0 6px 0 auto;
-    }
-
-    input[type=email] {
-        margin-bottom: 15px;
-        font-size: 2.8vw;
-
-    }
-    
-    .submit-button {
+    .email-submit {
         margin-bottom: 15px;
         font-size: 2.8vw;
     }
@@ -351,40 +376,10 @@ footer img {
         font-size: 4.5vw;
         margin-bottom: 20px;
     }
-
-    footer .nav-link {
-        font-size: 12px;
-        margin: 0 auto 0 8px;
-    }
 }
 
 @media screen and (max-width: 420px) {
-    header {
-        display: block;
-    }
-    
-    header .header-title {
-        font-size: 20px;
-        margin-bottom: 10px;
-        margin-left: 23px;
-    }
-
-    header .nav-bar {
-        margin-left: 15px;
-    }
-    
-    header .nav-link {
-        font-size: 12px;
-        margin: 0 8px;
-    }
-
-    input[type=email] {
-        margin-bottom: 15px;
-        font-size: 3.2vw;
-    }
-    
-    .submit-button {
-        margin-bottom: 15px;
+    .email-submit {
         font-size: 3.2vw;
     }
 
@@ -395,22 +390,9 @@ footer img {
     .short-description {
         font-size: 4vw;
     }
-
-    .video-section {
-        margin-bottom: 50px;
-    }
-
-    footer img {
-        height: 90px;
-        margin-right: 6px;
-    }
 }
 
-@media screen and (max-width: 340px) {
-    .video-section {
-        margin-bottom: 40px;
-    }
-    
+@media screen and (max-width: 380px) {    
     footer img {
         display: none;
     }
