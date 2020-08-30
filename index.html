@@ -12,20 +12,47 @@
 
     <body>
         <header id="header">
-            <img id="header-img" src="images/slurm-logo.png" alt="">
-            <h1 class="header-title">Enjoy Slurm</h1>
-            <nav id="nav-bar" class="nav-bar">
-                <a href="#email-section" class="nav-link">Enter to Win</a>
-                <a href="#brands-section" class="nav-link">Brands</a>
-                <a href="#video-section" class="nav-link">Learn More</a>
+            <div id="header-row" class="header-row">
+                <img id="header-img" src="images/slurm-logo.png" alt="">
+                <h1 class="header-title">Enjoy Slurm</h1>
+
+                <nav class="nav-bar">
+                    <a href="#email-section" class="nav-link">Enter Contest</a>
+                    <a href="#brands-section" class="nav-link">Brands</a>
+                    <a href="#video-section" class="nav-link">Learn More</a>
+                </nav>
+
+                <div class="hamburger-button-container" onclick="toggleSideNav(this)">
+                    <div class="menubar1"></div>
+                    <div class="menubar2"></div>
+                    <div class="menubar3"></div>
+                </div>
+            </div>
+
+            <nav id="side-nav">
+                <a href="#email-section" class="side-nav-link">Enter Contest</a>
+                <a href="#brands-section" class="side-nav-link">Brands</a>
+                <a href="#video-section" class="side-nav-link">Learn More</a>
             </nav>
+
+            <script>
+                function toggleSideNav(hamButton) {
+                    hamButton.classList.toggle("change");
+                    var sideNav = document.getElementById("side-nav");
+                    if (sideNav.style.width < "1px") {
+                        sideNav.style.width = "250px";
+                    } else {
+                        sideNav.style.width = "0px";
+                    }
+                }
+            </script>
         </header>
 
         <main>
             <div id="email-section">
                 <h2 class="win-trip-heading">WIN<br>A TRIP!</h2>
                 <p class="email-description">Enter for a chance to win a tour of the Slurm bottling plant on planet Wormulon and party with Slurms McKenzie</p>
-                <form id="form" action="https://www.freecodecamp.org/email-submit">
+                <form id="form" class="email-submit" action="https://www.freecodecamp.org/email-submit">
                     <input type="email" placeholder="Enter your email" id="email" class="email-input" required>
                     <button type="submit" id="submit" class="submit-button">Submit</button>
                 </form>
@@ -62,7 +89,7 @@
 
         <footer id="footer">
             <nav id="nav-bar-footer" class="navbar">
-                <a href="#email-section" class="nav-link">Enter to Win</a>
+                <a href="#email-section" class="nav-link">Enter Contest</a>
                 <a href="#brands-section" class="nav-link">Brands</a>
                 <a href="#video-section" class="nav-link">Learn More</a>
             </nav>
