@@ -289,8 +289,7 @@ footer img {
     }
 
     header #side-nav a:hover {
-        background-color: var(--slurm-light-blue);
-        color: var(--slurm-pink);
+        color: var(--slurm-light-pink);
     }
 
     input[type=email] {
