@@ -22,7 +22,7 @@
                     <a href="#video-section" class="nav-link">Learn More</a>
                 </nav>
 
-                <div class="hamburger-button-container" onclick="toggleSideNav(this)">
+                <div id="menu-button" class="hamburger-button-container" onclick="toggleSideNav()">
                     <div class="menubar1"></div>
                     <div class="menubar2"></div>
                     <div class="menubar3"></div>
@@ -30,14 +30,14 @@
             </div>
 
             <nav id="side-nav">
-                <a href="#email-section" class="side-nav-link">Enter Contest</a>
-                <a href="#brands-section" class="side-nav-link">Brands</a>
-                <a href="#video-section" class="side-nav-link">Learn More</a>
+                <a href="#email-section" class="side-nav-link" onclick="toggleSideNav()">Enter Contest</a>
+                <a href="#brands-section" class="side-nav-link" onclick="toggleSideNav()">Brands</a>
+                <a href="#video-section" class="side-nav-link" onclick="toggleSideNav()">Learn More</a>
             </nav>
 
             <script>
-                function toggleSideNav(hamButton) {
-                    hamButton.classList.toggle("change");
+                function toggleSideNav() {
+                    document.getElementById("menu-button").classList.toggle("change");
                     var sideNav = document.getElementById("side-nav");
                     if (sideNav.style.width < "1px") {
                         sideNav.style.width = "250px";
