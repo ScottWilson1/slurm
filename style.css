@@ -79,6 +79,11 @@ main {
     margin: 0 4%;
 }
 
+.title-image {
+    display: inline-block;
+    height: 255px;
+}
+
 h2 {
     font-size: 34px;
     font-family: Corben;
@@ -107,6 +112,7 @@ h2::before {
     margin-top: calc(var(--header-height) + 50px);
     margin-bottom: 0px;
     letter-spacing: .04em;
+    display: inline-block;
 }
 
 .email-description {
@@ -292,6 +298,10 @@ footer img {
         color: var(--slurm-light-pink);
     }
 
+    .title-image {
+        height: 225px;
+    }
+
     input[type=email] {
         width: 36%;
     }
@@ -319,6 +329,10 @@ footer img {
 }
 
 @media screen and (max-width: 680px) {
+    .title-image {
+        height: 32vw;
+    }
+
     .win-trip-heading {
         font-size: 12vw;
     }
