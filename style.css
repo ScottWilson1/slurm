@@ -79,11 +79,6 @@ main {
     margin: 0 4%;
 }
 
-.title-image {
-    display: inline-block;
-    height: 255px;
-}
-
 h2 {
     font-size: 34px;
     font-family: Corben;
@@ -103,6 +98,11 @@ h2::before {
 
 #email-section {
     text-align: center;
+}
+
+.title-image {
+    display: inline-block;
+    height: 250px;
 }
 
 .win-trip-heading {
